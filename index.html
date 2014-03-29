@@ -1,0 +1,152 @@
+<html>
+	<head>
+		<title>Harvest Moon: Back To Nature Guide</title>
+		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="global.css">
+	</head>
+	<body id="bkg-gray">
+		<div class="container">
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+						<span class="sr-only">Toggle Navigation</span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="crops.html">Crops</a></li>
+						<li><a href="animal.html">Animals</a></li>
+						<li><a href="mining.html">Mining</a></li>
+						<li><a href="fishing.html">Fishing</a></li>
+						<li><a href="tools.html">Tools</a></li>
+						<li><a href="girls.html">Girls</a></li>
+						<li><a href="characters.html">Characters</a></li>
+						<li><a href="festivals.html">Festivals</a></li>
+						<li><a href="shops.html">Shops</a></li>
+						<li><a href="cooking.html">Cooking</a></li>
+						<li><a href="powerberry.html">Power Berries</a></li>
+						<li><a href="secrets.hmtl">Secrets</a></li>
+						<li><a href="misc.html">Misc</a></li>
+						<li><a href="shiplist.html">Shipping List</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div id="head" class="row">
+				<div class="col-md-12">
+					<h2 align="center">Selamat Datang Di Web App Guide Harvest Moon BTN</h2>
+				</div>
+				<div class="col-md-6">
+					<p id="content">Web Guide berisi tentang semua panduan lengkap yang telah diambil dari <strike>banyak</strike> salah satu sumber (yang diterjemahkan) untuk kamu yang sedang bermain Harvest Moon: Back To Nature. Ada berbagai macam petunjuk dimulai dari tanaman (Crops) sampai Orang-orang yang sedang berada di Mineral Town. Panduan ini cocok bagi kamu seorang pemula yang ingin menjelajah lebih lanjut mengenai Harvest Moon: Back To Nature. Langsung saja silahkan jelajahi.</p>
+				</div>
+				<div class="col-md-6"><img class="img-thumbnail" src="img/img1.png"></div>
+				<div class="col-md-6">
+					<p id="content" style="text-align:center;">
+						<a id="#openModal" href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Open Farming Solution</a>
+						<a id="#openModal2" href="#" class="btn btn-primary" data-toggle="modal" data-target="#aboutModal">About Me</a>
+					</p>
+				</div>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title" id="myModalLabel">Farming Solution Problem</h4>
+							</div>
+							<div class="modal-body">
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-4 control-label">PILIH BIBIT</label>
+										<div id="typeahead-header" class="col-sm-8">
+											<input class="form-control" id="typeahead" type="text" placeholder="Nama Tanaman">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-4 control-label">JUMLAH</label>
+										<div class="col-sm-8">
+											<input class="form-control" type="text" placeholder="Jumlah yang akan ditanam">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-offset-4 col-sm-8">
+											<button class="btn btn-primary" type="submit">Submit Solution</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title" id="myModalLabel">Tentang Saya</h4>
+							</div>
+							<div class="modal-body">
+								<p style="text-align:center;">Created by: <strong>Dr4gonia Germany</strong><br>
+									Visit my blog: <a href="http://dr4gonia.blogpsot.com">http://dr4gonia.blogpsot.com</a><br>
+									Web App ini masih memiliki banyak kekurangan. Mohon mangap bila terdapat banyak kesalahan. Sekian.<br><br>
+									Untuk sekarang seadanya saja ya :p kapan-kapan diupdate lagi.<br>
+									Catatan: Karena source code-nya HTML silahkan edit sesuka hati kalau agan-agan sekalian bisa HTML dan Javascript.</p>
+								<h4>Keterangan sumber:</h4>
+								<ol type="1">
+									<li><a href="http://harvestmoonbacktonatureguide.com">http://harvestmoonbacktonatureguide.com</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="dist/js/typeahead.bundle.js"></script>
+		<script type="text/javascript" src="dist/js/modal.js"></script>
+		<script type="text/javascript">
+			var numbers = new Bloodhound({
+				datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.crop); },
+				queryTokenizer: Bloodhound.tokenizers.whitespace,
+				local: [
+					{ crop: 'Turnip' },
+					{ crop: 'Potato'},
+					{ crop: 'cucmber'},
+					{ crop: 'Cabbage'},
+					{ crop: 'Strawberry'},
+					{ crop: 'Onion'},
+					{ crop: 'Tomato'},
+					{ crop: 'Corn'},
+					{ crop: 'Pineapple'},
+					{ crop: 'Pumpkin'},
+					{ crop: 'Carrot'},
+					{ crop: 'Eggplant'},
+					{ crop: 'Sweet Potato'},
+					{ crop: 'Green Pepper'},
+					{ crop: 'Spinach'},
+				]
+			});
+
+			numbers.initialize();
+
+			$('#typeahead-header #typeahead').typeahead(null, {
+				displayKey: 'crop',
+				source: numbers.ttAdapter()
+			});
+			//Open Modal Farming Solution Problem
+			$('#openModal').click(function() {
+				event.preventDefault();
+				$('#myModal').modal('show');
+			});
+			//Open Modal About me
+			$('#openModal2').click(function() {
+				event.preventDefault();
+				$('#aboutModal').modal('show');
+			});
+		</script>
+	</body>
+</html>
